@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeauralStack Labs — Applied AI, Automation &amp; Engineering Studio</title>
+  <meta name="description" content="NeauralStack Labs builds practical machine learning solutions, automations, integrations, and technical tools for real business problems.">
+  <!-- TODO(owner): replace with the production domain once confirmed -->
+  <link rel="canonical" href="https://neauralstacklabs.example/">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NeauralStack Labs">
+  <meta property="og:title" content="NeauralStack Labs — Applied AI, Automation &amp; Engineering Studio">
+  <meta property="og:description" content="Practical ML solutions, automations, integrations, and technical tools for real business problems.">
+  <meta property="og:url" content="https://neauralstacklabs.example/">
+  <!-- TODO(owner): export assets/og-image.svg as a 1200x630 PNG and update this path -->
+  <meta property="og:image" content="https://neauralstacklabs.example/assets/og-image.png">
+  <meta property="og:image:alt" content="NeauralStack Labs — Make your data work smarter.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NeauralStack Labs — Applied AI, Automation &amp; Engineering Studio">
+  <meta name="twitter:description" content="Practical ML solutions, automations, integrations, and technical tools for real business problems.">
+  <meta name="twitter:image" content="https://neauralstacklabs.example/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="NeauralStack Labs — home">
+        <svg class="brand__mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-grad" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad)" stroke-width="2.5"/>
+          <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
+          <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+        </svg>
+        <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
+      </a>
+
+      <button class="nav-toggle" data-nav-toggle type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="contact.html">Discuss a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="grid-backdrop" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div>
+          <p class="eyebrow">Applied AI &amp; engineering studio</p>
+          <h1 class="hero__title" id="hero-title">Make your data<br><span class="text-gradient">work smarter.</span></h1>
+          <p class="hero__lede">
+            NeauralStack Labs builds practical machine learning solutions, automations,
+            integrations, and technical tools for real business problems — with honest
+            scope, reproducible testing, and clear communication.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--lg" href="contact.html">Discuss a Project</a>
+            <a class="btn btn--secondary btn--lg" href="services.html">Explore Our Services</a>
+          </div>
+          <ul class="hero__meta">
+            <li>ML engineering</li>
+            <li>Automation</li>
+            <li>Networking &amp; IT</li>
+            <li>Software development</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <!-- Original illustration: an ML/data workflow. Decorative, not real client data. -->
+          <svg viewBox="0 0 520 440" fill="none" role="img" aria-labelledby="hero-viz-title hero-viz-desc" width="100%">
+            <title id="hero-viz-title">Illustration of a machine learning workflow</title>
+            <desc id="hero-viz-desc">A diagram showing data flowing through cleaning, features, a model, and evaluation metrics, with a small results panel.</desc>
+            <defs>
+              <linearGradient id="hv-line" x1="60" y1="40" x2="460" y2="400" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+              <linearGradient id="hv-panel" x1="300" y1="230" x2="500" y2="410" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#121B30"/><stop offset="1" stop-color="#0B1120"/>
+              </linearGradient>
+              <linearGradient id="hv-bar" x1="0" y1="0" x2="1" y2="0">
+                <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+              </linearGradient>
+            </defs>
+
+            <!-- frame -->
+            <rect x="8" y="8" width="504" height="424" rx="24" fill="#0B1120" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+            <rect x="8" y="8" width="504" height="44" rx="24" fill="#0E1526"/>
+            <rect x="8" y="36" width="504" height="16" fill="#0E1526"/>
+            <circle cx="34" cy="30" r="5" fill="#5B8CFF" opacity="0.8"/>
+            <circle cx="52" cy="30" r="5" fill="#8B5CF6" opacity="0.7"/>
+            <circle cx="70" cy="30" r="5" fill="#34D3E0" opacity="0.6"/>
+            <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#7D8AA3">workflow.pipeline</text>
+
+            <!-- connecting flow -->
+            <path d="M110 130 C 170 130, 170 190, 230 190" stroke="url(#hv-line)" stroke-width="2" stroke-dasharray="6 6" opacity="0.9"/>
+            <path d="M110 130 C 170 130, 170 250, 230 250" stroke="rgba(148,163,184,0.35)" stroke-width="1.5"/>
+            <path d="M310 190 C 360 190, 360 150, 410 150" stroke="url(#hv-line)" stroke-width="2"/>
+            <path d="M310 250 C 360 250, 360 290, 410 290" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" stroke-dasharray="4 5"/>
+
+            <!-- node: data -->
+            <g>
+              <rect x="42" y="100" width="120" height="60" rx="14" fill="#121B30" stroke="rgba(91,140,255,0.5)" stroke-width="1.5"/>
+              <circle cx="66" cy="130" r="8" fill="#5B8CFF"/>
+              <text x="84" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Data</text>
+              <text x="84" y="144" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">ingest · clean</text>
+            </g>
+
+            <!-- node: features -->
+            <g>
+              <rect x="230" y="160" width="130" height="60" rx="14" fill="#121B30" stroke="rgba(91,140,255,0.45)" stroke-width="1.5"/>
+              <circle cx="254" cy="190" r="8" fill="#8B5CF6"/>
+              <text x="272" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Features</text>
+              <text x="272" y="204" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">transform</text>
+            </g>
+
+            <!-- node: model -->
+            <g>
+              <rect x="230" y="220" width="130" height="60" rx="14" fill="#121B30" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
+              <circle cx="254" cy="250" r="8" fill="#34D3E0"/>
+              <text x="272" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Model</text>
+              <text x="272" y="264" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">train · tune</text>
+            </g>
+
+            <!-- evaluation panel -->
+            <g>
+              <rect x="380" y="100" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(148,163,184,0.3)" stroke-width="1.5"/>
+              <text x="396" y="124" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">EVALUATION</text>
+              <rect x="396" y="136" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
+              <rect x="396" y="136" width="52" height="8" rx="4" fill="url(#hv-bar)"/>
+              <rect x="396" y="152" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
+              <rect x="396" y="152" width="38" height="8" rx="4" fill="url(#hv-bar)" opacity="0.75"/>
+              <rect x="396" y="168" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
+              <rect x="396" y="168" width="62" height="8" rx="4" fill="url(#hv-bar)" opacity="0.55"/>
+            </g>
+
+            <!-- metrics panel -->
+            <g>
+              <rect x="380" y="250" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(139,92,246,0.35)" stroke-width="1.5"/>
+              <text x="396" y="274" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">METRICS</text>
+              <!-- confusion-matrix motif (illustrative only) -->
+              <rect x="396" y="286" width="26" height="26" rx="4" fill="rgba(91,140,255,0.55)"/>
+              <rect x="428" y="286" width="26" height="26" rx="4" fill="rgba(139,92,246,0.25)"/>
+              <rect x="396" y="318" width="26" height="12" rx="4" fill="rgba(139,92,246,0.25)"/>
+              <rect x="428" y="318" width="26" height="12" rx="4" fill="rgba(91,140,255,0.4)"/>
+            </g>
+
+            <!-- bottom caption row -->
+            <text x="260" y="398" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">illustrative diagram — not client data</text>
+          </svg>
+          <p class="hero__caption">Illustrative workflow diagram — not client data</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== SERVICES =========================== -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">What we build</h2>
+          <p class="lede">Four focused service areas. Each engagement is scoped to deliverables you can review, test, and own.</p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card reveal">
+            <span class="card__index">01</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/>
+                <path d="M8.2 8.6 10.5 15M15.8 8.6 13.5 15M8.5 7h7"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Applied AI &amp; Machine Learning</h3>
+            <p class="card__text">From dataset inspection to trained, evaluated models — with honest reporting on what the data can and cannot support.</p>
+            <ul class="card__list">
+              <li>Data cleaning &amp; feature engineering</li>
+              <li>Classification &amp; regression models</li>
+              <li>Leakage checks &amp; proper evaluation</li>
+              <li>Prediction APIs &amp; deployment help</li>
+            </ul>
+            <div class="card__footer">
+              <a class="card__link" href="contact.html?service=ai-ml">Discuss an ML project</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">02</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/><path d="M12 8v4l3 2"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Automation &amp; AI Integration</h3>
+            <p class="card__text">Reduce repetitive work with well-built scripts, integrations, and workflows — with logging and error handling included.</p>
+            <ul class="card__list">
+              <li>Python workflow automation</li>
+              <li>Scheduled reporting pipelines</li>
+              <li>API &amp; document integrations</li>
+              <li>AI-assisted internal tools</li>
+            </ul>
+            <div class="card__footer">
+              <a class="card__link" href="contact.html?service=automation">Discuss an automation</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">03</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="2.5" width="6" height="5" rx="1.5"/><rect x="2.5" y="16.5" width="6" height="5" rx="1.5"/><rect x="15.5" y="16.5" width="6" height="5" rx="1.5"/>
+                <path d="M12 7.5v4M5.5 16.5v-2.5h13v2.5M12 11.5v2.5"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Networking &amp; IT Engineering</h3>
+            <p class="card__text">Authorized network configuration, diagnostics, and documentation — performed only with your explicit approval.</p>
+            <ul class="card__list">
+              <li>Network configuration &amp; troubleshooting</li>
+              <li>Topology planning &amp; documentation</li>
+              <li>Linux &amp; server administration</li>
+              <li>Monitoring &amp; operational scripting</li>
+            </ul>
+            <div class="card__footer">
+              <a class="card__link" href="contact.html?service=networking">Discuss networking work</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__index">04</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>
+              </svg>
+            </span>
+            <h3 class="card__title">Programming &amp; Scripting</h3>
+            <p class="card__text">Python utilities, REST APIs, backends, and prototypes — built to be maintained, not just demoed.</p>
+            <ul class="card__list">
+              <li>Python utilities &amp; scripts</li>
+              <li>REST API development</li>
+              <li>Data-processing tools</li>
+              <li>Bug fixing &amp; prototypes</li>
+            </ul>
+            <div class="card__footer">
+              <a class="card__link" href="contact.html?service=programming">Discuss development work</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="btn-row reveal" style="margin-top: var(--space-7); justify-content: center;">
+          <a class="btn btn--secondary" href="services.html">See full service details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== HOW WE WORK ========================= -->
+    <section class="section section--elevated" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How we work</p>
+          <h2 id="approach-title">A clear process, start to finish</h2>
+          <p class="lede">No fixed timelines promised before we understand a project. Every engagement moves through the same five stages.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title">Discovery</h3>
+            <p class="step__text">We understand the problem, constraints, available data, and what success actually looks like for you.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title">Scope</h3>
+            <p class="step__text">We agree on deliverables, timeline, assumptions, and acceptance criteria in writing before building.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title">Build</h3>
+            <p class="step__text">Implementation with version control and documented decisions, so nothing is a black box.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title">Validate</h3>
+            <p class="step__text">Testing against agreed requirements and the evaluation metrics that matter for your use case.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title">Deliver</h3>
+            <p class="step__text">The agreed artifacts, documentation, and a proper handover — so your team can take it forward.</p>
+          </li>
+        </ol>
+
+        <div class="btn-row reveal" style="margin-top: var(--space-7); justify-content: center;">
+          <a class="btn btn--secondary" href="approach.html">Read about our approach</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= SELECTED WORK ======================== -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Technical demonstrations</h2>
+          <p class="lede">
+            The cards below are labeled prototypes and demonstrations that show how we think and build.
+            They are not presented as completed client engagements.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="work-card reveal">
+            <div class="work-card__media">
+              <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
+                <text x="30" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">confusion_matrix</text>
+                <rect x="30" y="52" width="52" height="40" rx="6" fill="rgba(91,140,255,0.6)"/>
+                <rect x="90" y="52" width="52" height="40" rx="6" fill="rgba(139,92,246,0.28)"/>
+                <rect x="30" y="100" width="52" height="20" rx="6" fill="rgba(139,92,246,0.28)"/>
+                <rect x="90" y="100" width="52" height="20" rx="6" fill="rgba(91,140,255,0.4)"/>
+                <path d="M170 118 190 100 210 106 230 80 250 88 270 62 296 70" stroke="url(#wc1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs><linearGradient id="wc1" x1="170" y1="118" x2="296" y2="62"><stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+                <text x="170" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">metrics_report</text>
+              </svg>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__badges">
+                <span class="badge badge--demo"><span class="badge-dot" aria-hidden="true"></span>Technical demonstration</span>
+              </div>
+              <h3 class="work-card__title">ML Model Evaluation Lab</h3>
+              <p class="work-card__text">A rigorous evaluation workflow: validate data, check for leakage, compare a baseline against an improved model, and produce a reproducible report.</p>
+              <ul class="work-card__list">
+                <li>Dataset validation &amp; leakage checks</li>
+                <li>Baseline vs. improved model comparison</li>
+                <li>Precision, recall, F1 &amp; confusion matrix</li>
+                <li>Reproducible evaluation reports</li>
+              </ul>
+              <div class="work-card__links">
+                <span class="link-pending" title="Add the real repository or case-study URL when available">Repository link — pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media">
+              <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
+                <rect x="34" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(91,140,255,0.5)"/>
+                <text x="66" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Ingest</text>
+                <path d="M104 75h28" stroke="#5B8CFF" stroke-width="2"/>
+                <path d="m128 70 6 5-6 5" fill="none" stroke="#5B8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="140" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(139,92,246,0.5)"/>
+                <text x="172" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Transform</text>
+                <path d="M210 75h28" stroke="#8B5CF6" stroke-width="2"/>
+                <path d="m234 70 6 5-6 5" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="246" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(52,211,224,0.5)"/>
+                <text x="278" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Report</text>
+                <text x="34" y="122" font-family="Menlo, Consolas, monospace" font-size="10" fill="#5A6784">logs: run=ok rows=1,204 errors=0</text>
+              </svg>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__badges">
+                <span class="badge badge--prototype"><span class="badge-dot" aria-hidden="true"></span>Prototype</span>
+              </div>
+              <h3 class="work-card__title">Automated Reporting Pipeline</h3>
+              <p class="work-card__text">An end-to-end scheduled pipeline that ingests data, validates and transforms it, generates a report, and logs every run.</p>
+              <ul class="work-card__list">
+                <li>Data ingestion &amp; validation</li>
+                <li>Transformation &amp; scheduled report generation</li>
+                <li>Structured logging &amp; error handling</li>
+                <li>Runs on a schedule, unattended</li>
+              </ul>
+              <div class="work-card__links">
+                <span class="link-pending" title="Add the real repository or live-demo URL when available">Live demo link — pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media">
+              <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
+                <text x="30" y="42" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">POST /predict</text>
+                <text x="30" y="64" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5B8CFF">{ "features": [ … ] }</text>
+                <text x="30" y="88" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">HTTP/1.1 200 OK</text>
+                <text x="30" y="110" font-family="Menlo, Consolas, monospace" font-size="11" fill="#8B5CF6">{ "prediction": … }</text>
+                <circle cx="290" cy="42" r="14" fill="rgba(74,222,128,0.15)" stroke="rgba(74,222,128,0.6)"/>
+                <path d="m284 42 4 4 8-8" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__badges">
+                <span class="badge badge--prototype"><span class="badge-dot" aria-hidden="true"></span>Prototype</span>
+              </div>
+              <h3 class="work-card__title">Prediction API Prototype</h3>
+              <p class="work-card__text">A small inference service: a model endpoint with input validation, example requests, tests, and deployment documentation.</p>
+              <ul class="work-card__list">
+                <li>Model inference endpoint</li>
+                <li>Input validation &amp; error responses</li>
+                <li>Example requests and responses</li>
+                <li>Basic tests &amp; deployment docs</li>
+              </ul>
+              <div class="work-card__links">
+                <span class="link-pending" title="Add the real repository or live-demo URL when available">Live demo link — pending</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="btn-row reveal" style="margin-top: var(--space-7); justify-content: center;">
+          <a class="btn btn--secondary" href="work.html">View all demonstrations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA BAND =========================== -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 class="cta-band__title" id="cta-title">Have a problem worth solving?</h2>
+          <p class="cta-band__text">Tell us what you are trying to achieve. We will tell you honestly whether we are the right team for it.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--lg" href="contact.html">Discuss a Project</a>
+            <a class="btn btn--secondary btn--lg" href="about.html">Meet the Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="NeauralStack Labs — home">
+            <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="brand-grad-f" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad-f)" stroke-width="2.5"/>
+              <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad-f)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
+              <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+            </svg>
+            <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
+          </a>
+          <p class="footer__brand-text">
+            A small technology services agency specializing in applied AI/ML engineering,
+            intelligent automation, networking, and software development.
+          </p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h3 class="footer__heading">Site</h3>
+          <ul class="footer__links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="footer__heading">Services</h3>
+          <ul class="footer__links">
+            <li><a href="services.html#ai-ml">Applied AI &amp; ML</a></li>
+            <li><a href="services.html#automation">Automation &amp; AI Integration</a></li>
+            <li><a href="services.html#networking">Networking &amp; IT</a></li>
+            <li><a href="services.html#programming">Programming &amp; Scripting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Contact</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:ferroshes@gmail.com">ferroshes@gmail.com</a></li>
+            <li><a href="https://www.fiverr.com/sellers/ibrahim5665" target="_blank" rel="noopener noreferrer">Fiverr<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> NeauralStack Labs. All rights reserved.</p>
+        <!-- TODO(owner): add privacy/legal page links here once real pages exist -->
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

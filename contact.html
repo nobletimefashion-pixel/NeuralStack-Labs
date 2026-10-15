@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — NeauralStack Labs</title>
+  <meta name="description" content="Discuss a project with NeauralStack Labs. Tell us about your problem and we will respond with an honest assessment of fit.">
+  <!-- TODO(owner): replace with the production domain once confirmed -->
+  <link rel="canonical" href="https://neauralstacklabs.example/contact.html">
+  <meta name="theme-color" content="#070b14">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NeauralStack Labs">
+  <meta property="og:title" content="Contact — NeauralStack Labs">
+  <meta property="og:description" content="Tell us about your project. We respond with an honest assessment of fit.">
+  <meta property="og:url" content="https://neauralstacklabs.example/contact.html">
+  <meta property="og:image" content="https://neauralstacklabs.example/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — NeauralStack Labs">
+  <meta name="twitter:description" content="Tell us about your project. We respond with an honest assessment of fit.">
+  <meta name="twitter:image" content="https://neauralstacklabs.example/assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="NeauralStack Labs — home">
+        <svg class="brand__mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-grad" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad)" stroke-width="2.5"/>
+          <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
+          <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+        </svg>
+        <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
+      </a>
+
+      <button class="nav-toggle" data-nav-toggle type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#inquiry-form">Discuss a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page header -->
+    <section class="hero section--tight" aria-labelledby="page-title">
+      <div class="grid-backdrop" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1 id="page-title">Discuss a project</h1>
+        <p class="lede" style="max-width: 44rem;">
+          Tell us what you are trying to achieve. We will respond with an honest assessment
+          of whether we are the right team — and what it would take if we are.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact form + aside -->
+    <section class="section" aria-labelledby="form-title">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-panel reveal">
+            <h2 id="form-title" style="font-size: var(--fs-xl); margin-bottom: var(--space-5);">Project inquiry</h2>
+
+            <form class="form" id="inquiry-form" action="mailto:ferroshes@gmail.com" method="post" enctype="text/plain" novalidate>
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label class="field__label" for="name">Name <span aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required data-required aria-required="true" aria-describedby="name-error">
+                  <p class="field__error" id="name-error" role="alert"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="email">Work email <span aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required data-required aria-required="true" aria-describedby="email-error">
+                  <p class="field__error" id="email-error" role="alert"></p>
+                </div>
+              </div>
+
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label class="field__label" for="company">Company or project name <span class="field__optional">(optional)</span></label>
+                  <input id="company" name="company" type="text" autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label class="field__label" for="service">Service category <span aria-hidden="true">*</span></label>
+                  <select id="service" name="service" required data-required aria-required="true" aria-describedby="service-error">
+                    <option value="">Select a category…</option>
+                    <option value="ai-ml">Applied AI &amp; Machine Learning</option>
+                    <option value="automation">Automation &amp; AI Integration</option>
+                    <option value="networking">Networking &amp; IT Engineering</option>
+                    <option value="programming">Programming &amp; Scripting</option>
+                    <option value="other">Something else / not sure yet</option>
+                  </select>
+                  <p class="field__error" id="service-error" role="alert"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="description">Project description <span aria-hidden="true">*</span></label>
+                <textarea id="description" name="description" required data-required aria-required="true" aria-describedby="description-error description-hint" maxlength="2000" placeholder="What problem are you trying to solve? What data or systems are involved? What does success look like?"></textarea>
+                <p class="field__hint" id="description-hint">A few sentences is enough. Maximum 2,000 characters.</p>
+                <p class="field__error" id="description-error" role="alert"></p>
+              </div>
+
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label class="field__label" for="budget">Approximate budget <span class="field__optional">(optional)</span></label>
+                  <select id="budget" name="budget">
+                    <option value="">Prefer not to say yet</option>
+                    <option value="under-1k">Under $1,000</option>
+                    <option value="1k-5k">$1,000 – $5,000</option>
+                    <option value="5k-15k">$5,000 – $15,000</option>
+                    <option value="15k-plus">$15,000+</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="timeline">Desired timeline <span class="field__optional">(optional)</span></label>
+                  <select id="timeline" name="timeline">
+                    <option value="">No specific deadline</option>
+                    <option value="asap">As soon as possible</option>
+                    <option value="1-month">Within a month</option>
+                    <option value="1-3-months">1 – 3 months</option>
+                    <option value="3-plus-months">3+ months</option>
+                    <option value="exploring">Just exploring</option>
+                  </select>
+                </div>
+              </div>
+
+              <p class="form__note">
+                <strong>How this form works:</strong> when you press send, your own email
+                application opens with your answers prefilled — you review and send it from
+                there. Nothing is stored on this website. If your email app does not open,
+                email us directly at <a href="mailto:ferroshes@gmail.com">ferroshes@gmail.com</a>.
+              </p>
+
+              <!--
+                PRIVACY NOTE (draft — requires owner review before launch).
+                The wording below only describes what this static site actually does.
+                TODO(owner): review and approve this text, and add a real privacy
+                policy page before collecting inquiries at scale.
+              -->
+              <p class="form__note" style="border-left-color: var(--violet); background-color: rgba(139, 92, 246, 0.07); border-color: rgba(139, 92, 246, 0.3);">
+                <strong>Privacy (draft — pending owner confirmation):</strong> your inquiry
+                travels through your own email provider to our inbox. We use the details you
+                send only to reply about your project and to assess fit. We do not sell or
+                share inquiry details. Do not include passwords, API keys, or other secrets
+                in your message.
+              </p>
+
+              <div class="btn-row">
+                <button class="btn btn--primary btn--lg" type="submit">Open prefilled email</button>
+                <a class="btn btn--secondary btn--lg" href="mailto:ferroshes@gmail.com">Email us directly</a>
+                <a class="btn btn--ghost btn--lg" href="https://www.fiverr.com/sellers/ibrahim5665" target="_blank" rel="noopener noreferrer">Hire us on Fiverr<span class="sr-only"> — opens in a new tab</span></a>
+              </div>
+
+              <div class="form__status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+            </form>
+          </div>
+
+          <aside class="contact-aside reveal" aria-label="Other ways to reach us">
+            <div class="card">
+              <div class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-method__label">Email</p>
+                  <p class="contact-method__value"><a href="mailto:ferroshes@gmail.com">ferroshes@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-method__label">Fiverr</p>
+                  <p class="contact-method__value">
+                    <a href="https://www.fiverr.com/sellers/ibrahim5665" target="_blank" rel="noopener noreferrer">
+                      Hire us on Fiverr<span class="sr-only"> — opens in a new tab</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-method__label">Response time</p>
+                  <p class="contact-method__value">We aim to reply within 2 business days.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="contact-method">
+                <span class="contact-method__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-method__label">Location</p>
+                  <p class="contact-method__value">Remote-first. We work with international clients.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fiverr (ibrahim5665) is the business profile link above.
+                 TODO(owner): add a LinkedIn company page here too, when one exists. -->
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--elevated" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary class="faq__question">What types of projects do you accept?</summary>
+            <div class="faq__answer">
+              <p>
+                Projects that fit our four service areas: applied AI/ML, automation and
+                integration, networking and IT engineering, and programming/scripting.
+                We take on work for startups, SMEs, and founders building AI-powered
+                products. If a request falls outside what we can realistically deliver,
+                we will say so rather than take the work.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Can you work with an existing dataset or codebase?</summary>
+            <div class="faq__answer">
+              <p>
+                Yes. Most projects start from something that already exists — a dataset
+                with quirks, a codebase with history, or a process that half-works. Part
+                of discovery is understanding what you have before proposing what to
+                change.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Do you work with international clients?</summary>
+            <div class="faq__answer">
+              <p>
+                Yes. We are remote-first and work with clients across time zones.
+                Communication happens in writing with scheduled calls where they help.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">How do you estimate project costs?</summary>
+            <div class="faq__answer">
+              <p>
+                After discovery, we provide a written scope with deliverables, assumptions,
+                and a price or price range. Small, well-defined projects can usually be
+                fixed-price. Larger or uncertain ones may be staged, with each stage scoped
+                and priced separately. We do not quote a firm number before understanding
+                the problem — any estimate at that point would be a guess.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Can you build a proof of concept before a larger engagement?</summary>
+            <div class="faq__answer">
+              <p>
+                Yes, and we often recommend it. A scoped proof of concept lets both sides
+                test the working relationship and the technical assumptions before a larger
+                commitment. If the PoC shows the idea does not hold, you have spent less
+                finding that out.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">How do you protect client data?</summary>
+            <div class="faq__answer">
+              <p>
+                We only access the data needed for the agreed scope, handle it carefully,
+                and do not use client data for unrelated purposes. For networking work,
+                all assessments and changes require your explicit authorization. Specific
+                data-handling terms can be written into the project agreement.
+                <em>Owner note: confirm your actual data-handling process and update this
+                answer before launch.</em>
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">What happens after project delivery?</summary>
+            <div class="faq__answer">
+              <p>
+                You receive the agreed artifacts, documentation, and a handover. What
+                happens next — support, iteration, or handover to your own team — is
+                agreed during scoping. Ongoing support can be arranged separately if needed.
+                <em>Owner note: confirm your actual post-delivery policy and update this
+                answer before launch.</em>
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="btn-row reveal" style="margin-top: var(--space-7); justify-content: center;">
+          <a class="btn btn--primary btn--lg" href="#inquiry-form">Discuss a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="NeauralStack Labs — home">
+            <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="brand-grad-f" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+                </linearGradient>
+              </defs>
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad-f)" stroke-width="2.5"/>
+              <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad-f)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
+              <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+            </svg>
+            <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
+          </a>
+          <p class="footer__brand-text">
+            A small technology services agency specializing in applied AI/ML engineering,
+            intelligent automation, networking, and software development.
+          </p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h3 class="footer__heading">Site</h3>
+          <ul class="footer__links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="footer__heading">Services</h3>
+          <ul class="footer__links">
+            <li><a href="services.html#ai-ml">Applied AI &amp; ML</a></li>
+            <li><a href="services.html#automation">Automation &amp; AI Integration</a></li>
+            <li><a href="services.html#networking">Networking &amp; IT</a></li>
+            <li><a href="services.html#programming">Programming &amp; Scripting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Contact</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:ferroshes@gmail.com">ferroshes@gmail.com</a></li>
+            <li><a href="https://www.fiverr.com/sellers/ibrahim5665" target="_blank" rel="noopener noreferrer">Fiverr<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> NeauralStack Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

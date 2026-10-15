@@ -1,0 +1,5 @@
+# TODO(owner): update the sitemap URL below to the real domain before launch.
+User-agent: *
+Allow: /
+
+Sitemap: https://neauralstacklabs.example/sitemap.xml
