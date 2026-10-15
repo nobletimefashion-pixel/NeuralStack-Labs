@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NeauralStack Labs — Official Website
 
 Production-ready static website for **NeauralStack Labs**, a technology services agency
@@ -32,15 +31,16 @@ index.html          Home: hero, services, process, selected work, CTA
 services.html       Full service details (4 services, anchor-linked)
 approach.html       How we work (5 stages) + why work with us
 work.html           Technical demonstrations (3, clearly labeled)
-about.html          Team overview + editable profile placeholders
+about.html          Team: 7 members with roles + Fiverr links
 contact.html        FAQ + project inquiry form (mailto-based)
 css/tokens.css      Design tokens (colors, type, spacing, motion)
 css/base.css        Reset, typography, layout utilities
 css/components.css  All UI components (nav, cards, forms, footer…)
 js/main.js          Mobile nav, scroll reveal, year stamp, contact form
 assets/             Logo, favicon, Open Graph image source
-robots.txt          Crawler rules (update domain before launch)
-sitemap.xml         Sitemap (update domain before launch)
+robots.txt          Crawler rules
+sitemap.xml         Sitemap
+vercel.json         Static-deployment config for Vercel
 LAUNCH_CHECKLIST.md Every owner action still required
 ```
 
@@ -50,7 +50,7 @@ All placeholders are marked with `TODO(owner)` in the source. The main ones:
 
 | What | Where | Current value |
 |---|---|---|
-| Production domain | `<link rel="canonical">`, OG/Twitter tags in every `.html`; `robots.txt`; `sitemap.xml` | `https://neauralstacklabs.example/` |
+| Production domain | `<link rel="canonical">`, OG/Twitter tags in every `.html`; `robots.txt`; `sitemap.xml` | `https://neuralstack-labs.vercel.app` |
 | Contact email | `js/main.js` (`CONTACT_EMAIL`), `mailto:` links in every page, `contact.html` form `action` | `ferroshes@gmail.com` |
 | OG image PNG | Export `assets/og-image.svg` to a 1200×630 PNG, update OG tags | referenced as `assets/og-image.png` (does not exist yet) |
 | Fiverr links | Footer + contact page (`ibrahim5665`); team cards on `about.html` | added — 5 member cards still lack Fiverr URLs (marked "pending") |
@@ -103,17 +103,27 @@ sufficient contrast, reduced-motion support, and semantic landmarks.
 - Privacy wording on the contact page is a **draft** and is marked as requiring owner
   confirmation
 
-## Deploying
+## Deploying (Vercel)
 
-Works on any static host. Free options:
+The site is fully static — no build step, no install step. A `vercel.json` is included
+that forces the correct static settings:
 
-- **GitHub Pages:** push this directory, enable Pages on the branch; set the site root
-  to the folder containing `index.html`.
-- **Cloudflare Pages / Netlify / Vercel:** connect the repo; build command: none;
-  output directory: the repo root.
+```json
+{
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": null,
+  "outputDirectory": "."
+}
+```
 
-After deployment, replace every `neauralstacklabs.example` placeholder with the real URL
-and re-check `robots.txt` and `sitemap.xml`.
-=======
-# NeuralStack-Labs
->>>>>>> 2b2c36a7e1f3184c224ea2aa85f3b8f0503db455
+**Important:** in the Vercel dashboard, set **Framework Preset → Other** (not Python,
+not Next.js). Build Command and Install Command: empty. Output Directory: `.`.
+Then deploy — pages are served directly from the repo root.
+
+After deployment, confirm the canonical/OG URLs in the HTML, `robots.txt`, and
+`sitemap.xml` match the final domain (`https://neuralstack-labs.vercel.app` today;
+update them if a custom domain is attached later).
+
+Works on any static host: GitHub Pages, Cloudflare Pages, and Netlify also work —
+build command: none; output directory: the repo root.

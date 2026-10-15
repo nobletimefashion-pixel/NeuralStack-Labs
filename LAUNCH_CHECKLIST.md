@@ -5,8 +5,12 @@ Search the codebase for `TODO(owner)` to find every marked spot.
 
 ## Blocking (site should not launch without these)
 
-- [ ] **Confirm the production domain** and replace `https://neauralstacklabs.example/`
-      in: canonical URLs, OG/Twitter tags (6 HTML files), `robots.txt`, `sitemap.xml`.
+- [x] **Production domain** — all canonical/OG URLs, `robots.txt`, and `sitemap.xml`
+      now point to `https://neuralstack-labs.vercel.app`. If a custom domain is
+      attached later, update them again.
+- [x] **Vercel deploy config** — `vercel.json` forces a static deployment. In the
+      dashboard, Framework Preset must be **"Other"** (never Python), with empty
+      Build and Install commands and Output Directory `.`.
 - [ ] **Confirm the contact email** — currently `ferroshes@gmail.com` in `js/main.js`
       and all `mailto:` links. Change if a dedicated business address is preferred.
 - [ ] **Review the privacy draft** on `contact.html` (marked "draft — pending owner

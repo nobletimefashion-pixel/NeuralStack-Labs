@@ -1,5 +1,7 @@
-# TODO(owner): update the sitemap URL below to the real domain before launch.
+# Deployed at https://neuralstack-labs.vercel.app
+# TODO(owner): if a custom domain is added later, update the Sitemap URL below
+# and all canonical/OG URLs in the HTML files.
 User-agent: *
 Allow: /
 
-Sitemap: https://neauralstacklabs.example/sitemap.xml
+Sitemap: https://neuralstack-labs.vercel.app/sitemap.xml
