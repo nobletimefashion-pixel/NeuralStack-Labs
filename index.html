@@ -7,7 +7,7 @@
   <meta name="description" content="NeauralStack Labs builds practical machine learning solutions, automations, integrations, and technical tools for real business problems.">
   <!-- TODO(owner): replace with the production domain once confirmed -->
   <link rel="canonical" href="https://neuralstack-labs.vercel.app/">
-  <meta name="theme-color" content="#070b14">
+  <meta name="theme-color" content="#f4f7fc">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -30,6 +30,8 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <script src="js/main.js" defer></script>
+  <script src="js/hero-slider.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,13 +42,13 @@
         <svg class="brand__mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <defs>
             <linearGradient id="brand-grad" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+              <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
             </linearGradient>
           </defs>
           <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad)" stroke-width="2.5"/>
           <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
-          <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+          <circle cx="10" cy="9.5" r="2.6" fill="#ffffff" stroke="#1D5FD0" stroke-width="2"/>
+          <circle cx="22" cy="22.5" r="2.6" fill="#ffffff" stroke="#6D4AFF" stroke-width="2"/>
         </svg>
         <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
       </a>
@@ -58,10 +60,68 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
-          <li><a class="nav__link" href="services.html">Services</a></li>
-          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav__link" type="button" aria-expanded="false" aria-controls="nav-services">
+              Services
+              <svg class="nav__caret" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown nav-dropdown--wide" id="nav-services">
+              <a class="nav-dropdown__link" href="services.html#ai-ml">
+                <span class="nav-dropdown__title">Applied AI &amp; Machine Learning</span>
+                <span class="nav-dropdown__desc">Models, evaluation, prediction APIs</span>
+              </a>
+              <a class="nav-dropdown__link" href="services.html#automation">
+                <span class="nav-dropdown__title">Automation &amp; AI Integration</span>
+                <span class="nav-dropdown__desc">Workflows, pipelines, internal tools</span>
+              </a>
+              <a class="nav-dropdown__link" href="services.html#networking">
+                <span class="nav-dropdown__title">Networking &amp; IT</span>
+                <span class="nav-dropdown__desc">Configuration, diagnostics, Linux</span>
+              </a>
+              <a class="nav-dropdown__link" href="services.html#programming">
+                <span class="nav-dropdown__title">Programming &amp; Scripting</span>
+                <span class="nav-dropdown__desc">Python, REST APIs, prototypes</span>
+              </a>
+              <a class="nav-dropdown__all" href="services.html">All services →</a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <button class="nav__link" type="button" aria-expanded="false" aria-controls="nav-approach">
+              Approach
+              <svg class="nav__caret" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown" id="nav-approach">
+              <a class="nav-dropdown__link" href="approach.html#process">
+                <span class="nav-dropdown__title">How we work</span>
+                <span class="nav-dropdown__desc">Five stages, start to finish</span>
+              </a>
+              <a class="nav-dropdown__link" href="approach.html">
+                <span class="nav-dropdown__title">Our approach</span>
+                <span class="nav-dropdown__desc">Principles, honesty, and QA</span>
+              </a>
+            </div>
+          </li>
+
           <li><a class="nav__link" href="work.html">Work</a></li>
-          <li><a class="nav__link" href="about.html">About</a></li>
+
+          <li class="nav-item has-dropdown">
+            <button class="nav__link" type="button" aria-expanded="false" aria-controls="nav-about">
+              About
+              <svg class="nav__caret" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown" id="nav-about">
+              <a class="nav-dropdown__link" href="about.html">
+                <span class="nav-dropdown__title">About us</span>
+                <span class="nav-dropdown__desc">Who we are and what we believe</span>
+              </a>
+              <a class="nav-dropdown__link" href="about.html#team-title">
+                <span class="nav-dropdown__title">Meet the team</span>
+                <span class="nav-dropdown__desc">The engineers behind the work</span>
+              </a>
+            </div>
+          </li>
+
           <li><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
         <a class="btn btn--primary btn--sm nav__cta" href="contact.html">Discuss a Project</a>
@@ -70,114 +130,367 @@
   </header>
 
   <main id="main">
-    <!-- ============================= HERO ============================= -->
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- ========================== HERO SLIDER ========================== -->
+    <section class="hero-slider" data-hero-slider aria-label="Featured services">
       <div class="grid-backdrop" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div>
-          <p class="eyebrow">Applied AI &amp; engineering studio</p>
-          <h1 class="hero__title" id="hero-title">Make your data<br><span class="text-gradient">work smarter.</span></h1>
-          <p class="hero__lede">
-            NeauralStack Labs builds practical machine learning solutions, automations,
-            integrations, and technical tools for real business problems — with honest
-            scope, reproducible testing, and clear communication.
-          </p>
-          <div class="btn-row">
-            <a class="btn btn--primary btn--lg" href="contact.html">Discuss a Project</a>
-            <a class="btn btn--secondary btn--lg" href="services.html">Explore Our Services</a>
+      <div class="hero-slider__track container">
+
+        <!-- Slide 1 — AI / ML (holds the page's only h1) -->
+        <div class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4: Applied AI and machine learning">
+          <div class="hero-slide__inner">
+            <div>
+              <p class="hero-slide__eyebrow">Applied AI &amp; machine learning</p>
+              <h1 class="hero-slide__title" id="hero-title">Make your data<br><span class="text-gradient">work smarter.</span></h1>
+              <p class="hero-slide__lede">
+                NeauralStack Labs builds practical machine learning solutions, automations,
+                integrations, and technical tools for real business problems — with honest
+                scope, reproducible testing, and clear communication.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary btn--lg" href="services.html#ai-ml">Learn More</a>
+                <a class="btn btn--secondary btn--lg" href="contact.html">Discuss a Project</a>
+              </div>
+            </div>
+            <div class="hero-slide__visual">
+              <!-- Original illustration: an ML/data workflow. Decorative, not real client data. -->
+              <svg viewBox="0 0 520 440" fill="none" role="img" aria-labelledby="hero-viz-title hero-viz-desc" width="100%">
+                <title id="hero-viz-title">Illustration of a machine learning workflow</title>
+                <desc id="hero-viz-desc">A diagram showing data flowing through cleaning, features, a model, and evaluation metrics, with a small results panel.</desc>
+                <defs>
+                  <linearGradient id="hv-line" x1="60" y1="40" x2="460" y2="400" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
+                  </linearGradient>
+                  <linearGradient id="hv-panel" x1="300" y1="230" x2="500" y2="410" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff"/><stop offset="1" stop-color="#f0f4fb"/>
+                  </linearGradient>
+                  <linearGradient id="hv-bar" x1="0" y1="0" x2="1" y2="0">
+                    <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- frame -->
+                <rect x="8" y="8" width="504" height="424" rx="24" fill="#f0f4fb" stroke="rgba(22,35,59,0.16)" stroke-width="1.5"/>
+                <rect x="8" y="8" width="504" height="44" rx="24" fill="#e8eefb"/>
+                <rect x="8" y="36" width="504" height="16" fill="#e8eefb"/>
+                <circle cx="34" cy="30" r="5" fill="#1D5FD0" opacity="0.85"/>
+                <circle cx="52" cy="30" r="5" fill="#6D4AFF" opacity="0.75"/>
+                <circle cx="70" cy="30" r="5" fill="#0E9DB3" opacity="0.7"/>
+                <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#5A6784">workflow.pipeline</text>
+
+                <!-- connecting flow -->
+                <path d="M110 130 C 170 130, 170 190, 230 190" stroke="url(#hv-line)" stroke-width="2" stroke-dasharray="6 6" opacity="0.9"/>
+                <path d="M110 130 C 170 130, 170 250, 230 250" stroke="rgba(70,85,114,0.45)" stroke-width="1.5"/>
+                <path d="M310 190 C 360 190, 360 150, 410 150" stroke="url(#hv-line)" stroke-width="2"/>
+                <path d="M310 250 C 360 250, 360 290, 410 290" stroke="rgba(70,85,114,0.5)" stroke-width="1.5" stroke-dasharray="4 5"/>
+
+                <!-- node: data -->
+                <g>
+                  <rect x="42" y="100" width="120" height="60" rx="14" fill="#ffffff" stroke="rgba(29,95,208,0.5)" stroke-width="1.5"/>
+                  <circle cx="66" cy="130" r="8" fill="#1D5FD0"/>
+                  <text x="84" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16233b">Data</text>
+                  <text x="84" y="144" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">ingest · clean</text>
+                </g>
+
+                <!-- node: features -->
+                <g>
+                  <rect x="230" y="160" width="130" height="60" rx="14" fill="#ffffff" stroke="rgba(29,95,208,0.45)" stroke-width="1.5"/>
+                  <circle cx="254" cy="190" r="8" fill="#6D4AFF"/>
+                  <text x="272" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16233b">Features</text>
+                  <text x="272" y="204" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">transform</text>
+                </g>
+
+                <!-- node: model -->
+                <g>
+                  <rect x="230" y="220" width="130" height="60" rx="14" fill="#ffffff" stroke="rgba(109,74,255,0.5)" stroke-width="1.5"/>
+                  <circle cx="254" cy="250" r="8" fill="#0E9DB3"/>
+                  <text x="272" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16233b">Model</text>
+                  <text x="272" y="264" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">train · tune</text>
+                </g>
+
+                <!-- evaluation panel -->
+                <g>
+                  <rect x="380" y="100" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(22,35,59,0.2)" stroke-width="1.5"/>
+                  <text x="396" y="124" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">EVALUATION</text>
+                  <rect x="396" y="136" width="72" height="8" rx="4" fill="rgba(22,35,59,0.12)"/>
+                  <rect x="396" y="136" width="52" height="8" rx="4" fill="url(#hv-bar)"/>
+                  <rect x="396" y="152" width="72" height="8" rx="4" fill="rgba(22,35,59,0.12)"/>
+                  <rect x="396" y="152" width="38" height="8" rx="4" fill="url(#hv-bar)" opacity="0.75"/>
+                  <rect x="396" y="168" width="72" height="8" rx="4" fill="rgba(22,35,59,0.12)"/>
+                  <rect x="396" y="168" width="62" height="8" rx="4" fill="url(#hv-bar)" opacity="0.55"/>
+                </g>
+
+                <!-- metrics panel -->
+                <g>
+                  <rect x="380" y="250" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(109,74,255,0.4)" stroke-width="1.5"/>
+                  <text x="396" y="274" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">METRICS</text>
+                  <!-- confusion-matrix motif (illustrative only) -->
+                  <rect x="396" y="286" width="26" height="26" rx="4" fill="rgba(29,95,208,0.7)"/>
+                  <rect x="428" y="286" width="26" height="26" rx="4" fill="rgba(109,74,255,0.3)"/>
+                  <rect x="396" y="318" width="26" height="12" rx="4" fill="rgba(109,74,255,0.3)"/>
+                  <rect x="428" y="318" width="26" height="12" rx="4" fill="rgba(29,95,208,0.45)"/>
+                </g>
+
+                <!-- bottom caption row -->
+                <text x="260" y="398" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">illustrative diagram — not client data</text>
+              </svg>
+              <p class="hero-slide__caption">Illustrative workflow diagram — not client data</p>
+            </div>
           </div>
-          <ul class="hero__meta">
-            <li>ML engineering</li>
-            <li>Automation</li>
-            <li>Networking &amp; IT</li>
-            <li>Software development</li>
-          </ul>
         </div>
 
-        <div class="hero__visual">
-          <!-- Original illustration: an ML/data workflow. Decorative, not real client data. -->
-          <svg viewBox="0 0 520 440" fill="none" role="img" aria-labelledby="hero-viz-title hero-viz-desc" width="100%">
-            <title id="hero-viz-title">Illustration of a machine learning workflow</title>
-            <desc id="hero-viz-desc">A diagram showing data flowing through cleaning, features, a model, and evaluation metrics, with a small results panel.</desc>
-            <defs>
-              <linearGradient id="hv-line" x1="60" y1="40" x2="460" y2="400" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
-              </linearGradient>
-              <linearGradient id="hv-panel" x1="300" y1="230" x2="500" y2="410" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#121B30"/><stop offset="1" stop-color="#0B1120"/>
-              </linearGradient>
-              <linearGradient id="hv-bar" x1="0" y1="0" x2="1" y2="0">
-                <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
-              </linearGradient>
-            </defs>
+        <!-- Slide 2 — Automation -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Business automation">
+          <div class="hero-slide__inner">
+            <div>
+              <p class="hero-slide__eyebrow">Business automation</p>
+              <h2 class="hero-slide__title">Automate the<br><span class="text-gradient">busywork.</span></h2>
+              <p class="hero-slide__lede">
+                Repetitive tasks, scheduled reports, and manual data handoffs slow teams down.
+                We build scripted workflows and integrations with logging and error handling
+                included — so the automation keeps running after we hand it over.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary btn--lg" href="services.html#automation">Learn More</a>
+                <a class="btn btn--secondary btn--lg" href="contact.html?service=automation">Discuss an automation</a>
+              </div>
+            </div>
+            <div class="hero-slide__visual">
+              <svg viewBox="0 0 520 400" fill="none" role="img" aria-labelledby="auto-viz-title auto-viz-desc" width="100%">
+                <title id="auto-viz-title">Illustration of an automation workflow</title>
+                <desc id="auto-viz-desc">Four connected stages — trigger, fetch, transform and report — finishing with a successful run badge.</desc>
+                <defs>
+                  <linearGradient id="auto-grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="8" width="504" height="384" rx="24" fill="#f0f4fb" stroke="rgba(22,35,59,0.16)" stroke-width="1.5"/>
+                <rect x="8" y="8" width="504" height="44" rx="24" fill="#e8eefb"/>
+                <rect x="8" y="36" width="504" height="16" fill="#e8eefb"/>
+                <circle cx="34" cy="30" r="5" fill="#1D5FD0" opacity="0.85"/>
+                <circle cx="52" cy="30" r="5" fill="#6D4AFF" opacity="0.75"/>
+                <circle cx="70" cy="30" r="5" fill="#0E9DB3" opacity="0.7"/>
+                <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#5A6784">automation.run</text>
 
-            <!-- frame -->
-            <rect x="8" y="8" width="504" height="424" rx="24" fill="#0B1120" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
-            <rect x="8" y="8" width="504" height="44" rx="24" fill="#0E1526"/>
-            <rect x="8" y="36" width="504" height="16" fill="#0E1526"/>
-            <circle cx="34" cy="30" r="5" fill="#5B8CFF" opacity="0.8"/>
-            <circle cx="52" cy="30" r="5" fill="#8B5CF6" opacity="0.7"/>
-            <circle cx="70" cy="30" r="5" fill="#34D3E0" opacity="0.6"/>
-            <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#7D8AA3">workflow.pipeline</text>
+                <!-- vertical stage chain -->
+                <g font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16233b">
+                  <rect x="60" y="80" width="400" height="56" rx="14" fill="#ffffff" stroke="rgba(29,95,208,0.5)" stroke-width="1.5"/>
+                  <circle cx="94" cy="108" r="9" fill="url(#auto-grad)"/>
+                  <text x="118" y="104">Trigger — schedule or webhook</text>
+                  <text x="118" y="124" font-family="Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#5A6784">cron: 0 8 * * 1</text>
 
-            <!-- connecting flow -->
-            <path d="M110 130 C 170 130, 170 190, 230 190" stroke="url(#hv-line)" stroke-width="2" stroke-dasharray="6 6" opacity="0.9"/>
-            <path d="M110 130 C 170 130, 170 250, 230 250" stroke="rgba(148,163,184,0.35)" stroke-width="1.5"/>
-            <path d="M310 190 C 360 190, 360 150, 410 150" stroke="url(#hv-line)" stroke-width="2"/>
-            <path d="M310 250 C 360 250, 360 290, 410 290" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" stroke-dasharray="4 5"/>
+                  <path d="M260 136v28" stroke="rgba(29,95,208,0.55)" stroke-width="2" stroke-dasharray="5 5"/>
+                  <path d="m254 158 6 7 6-7" fill="none" stroke="rgba(29,95,208,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <!-- node: data -->
-            <g>
-              <rect x="42" y="100" width="120" height="60" rx="14" fill="#121B30" stroke="rgba(91,140,255,0.5)" stroke-width="1.5"/>
-              <circle cx="66" cy="130" r="8" fill="#5B8CFF"/>
-              <text x="84" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Data</text>
-              <text x="84" y="144" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">ingest · clean</text>
-            </g>
+                  <rect x="60" y="164" width="400" height="56" rx="14" fill="#ffffff" stroke="rgba(109,74,255,0.45)" stroke-width="1.5"/>
+                  <circle cx="94" cy="192" r="9" fill="#6D4AFF"/>
+                  <text x="118" y="188">Fetch &amp; validate data</text>
+                  <text x="118" y="208" font-family="Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#5A6784">rows=1,204 errors=0</text>
 
-            <!-- node: features -->
-            <g>
-              <rect x="230" y="160" width="130" height="60" rx="14" fill="#121B30" stroke="rgba(91,140,255,0.45)" stroke-width="1.5"/>
-              <circle cx="254" cy="190" r="8" fill="#8B5CF6"/>
-              <text x="272" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Features</text>
-              <text x="272" y="204" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">transform</text>
-            </g>
+                  <path d="M260 220v28" stroke="rgba(109,74,255,0.55)" stroke-width="2" stroke-dasharray="5 5"/>
+                  <path d="m254 242 6 7 6-7" fill="none" stroke="rgba(109,74,255,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <!-- node: model -->
-            <g>
-              <rect x="230" y="220" width="130" height="60" rx="14" fill="#121B30" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
-              <circle cx="254" cy="250" r="8" fill="#34D3E0"/>
-              <text x="272" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#E9EEFB">Model</text>
-              <text x="272" y="264" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">train · tune</text>
-            </g>
+                  <rect x="60" y="248" width="400" height="56" rx="14" fill="#ffffff" stroke="rgba(14,157,179,0.5)" stroke-width="1.5"/>
+                  <circle cx="94" cy="276" r="9" fill="#0E9DB3"/>
+                  <text x="118" y="272">Transform &amp; generate report</text>
+                  <text x="118" y="292" font-family="Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#5A6784">report_weekly.pdf → inbox</text>
+                </g>
 
-            <!-- evaluation panel -->
-            <g>
-              <rect x="380" y="100" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(148,163,184,0.3)" stroke-width="1.5"/>
-              <text x="396" y="124" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">EVALUATION</text>
-              <rect x="396" y="136" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
-              <rect x="396" y="136" width="52" height="8" rx="4" fill="url(#hv-bar)"/>
-              <rect x="396" y="152" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
-              <rect x="396" y="152" width="38" height="8" rx="4" fill="url(#hv-bar)" opacity="0.75"/>
-              <rect x="396" y="168" width="72" height="8" rx="4" fill="rgba(148,163,184,0.18)"/>
-              <rect x="396" y="168" width="62" height="8" rx="4" fill="url(#hv-bar)" opacity="0.55"/>
-            </g>
-
-            <!-- metrics panel -->
-            <g>
-              <rect x="380" y="250" width="104" height="90" rx="14" fill="url(#hv-panel)" stroke="rgba(139,92,246,0.35)" stroke-width="1.5"/>
-              <text x="396" y="274" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">METRICS</text>
-              <!-- confusion-matrix motif (illustrative only) -->
-              <rect x="396" y="286" width="26" height="26" rx="4" fill="rgba(91,140,255,0.55)"/>
-              <rect x="428" y="286" width="26" height="26" rx="4" fill="rgba(139,92,246,0.25)"/>
-              <rect x="396" y="318" width="26" height="12" rx="4" fill="rgba(139,92,246,0.25)"/>
-              <rect x="428" y="318" width="26" height="12" rx="4" fill="rgba(91,140,255,0.4)"/>
-            </g>
-
-            <!-- bottom caption row -->
-            <text x="260" y="398" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">illustrative diagram — not client data</text>
-          </svg>
-          <p class="hero__caption">Illustrative workflow diagram — not client data</p>
+                <!-- success badge -->
+                <g>
+                  <rect x="60" y="330" width="400" height="46" rx="14" fill="#ffffff" stroke="rgba(22,163,74,0.5)" stroke-width="1.5"/>
+                  <circle cx="92" cy="353" r="10" fill="rgba(22,163,74,0.15)" stroke="rgba(22,163,74,0.6)"/>
+                  <path d="m87 353 4 4 7-8" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="114" y="358" font-family="Menlo, Consolas, monospace" font-size="12" fill="#16233b">run ok — unattended, fully logged</text>
+                </g>
+              </svg>
+              <p class="hero-slide__caption">Illustrative pipeline — not client data</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Slide 3 — Networking -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Networking and IT">
+          <div class="hero-slide__inner">
+            <div>
+              <p class="hero-slide__eyebrow">Networking &amp; IT</p>
+              <h2 class="hero-slide__title">Networks that<br><span class="text-gradient">stay dependable.</span></h2>
+              <p class="hero-slide__lede">
+                Authorized network configuration, diagnostics, monitoring, and documentation —
+                performed only with your explicit approval. We leave your infrastructure clearer
+                than we found it, with documentation your team can actually use.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary btn--lg" href="services.html#networking">Learn More</a>
+                <a class="btn btn--secondary btn--lg" href="contact.html?service=networking">Discuss networking work</a>
+              </div>
+            </div>
+            <div class="hero-slide__visual">
+              <svg viewBox="0 0 520 400" fill="none" role="img" aria-labelledby="net-viz-title net-viz-desc" width="100%">
+                <title id="net-viz-title">Illustration of a network topology</title>
+                <desc id="net-viz-desc">A central router connected to three devices, with a monitoring status panel showing all links healthy.</desc>
+                <defs>
+                  <linearGradient id="net-grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="8" width="504" height="384" rx="24" fill="#f0f4fb" stroke="rgba(22,35,59,0.16)" stroke-width="1.5"/>
+                <rect x="8" y="8" width="504" height="44" rx="24" fill="#e8eefb"/>
+                <rect x="8" y="36" width="504" height="16" fill="#e8eefb"/>
+                <circle cx="34" cy="30" r="5" fill="#1D5FD0" opacity="0.85"/>
+                <circle cx="52" cy="30" r="5" fill="#6D4AFF" opacity="0.75"/>
+                <circle cx="70" cy="30" r="5" fill="#0E9DB3" opacity="0.7"/>
+                <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#5A6784">net.monitor</text>
+
+                <!-- links -->
+                <path d="M260 210 120 120M260 210l140-90M260 210v110" stroke="url(#net-grad)" stroke-width="2.5"/>
+                <path d="M260 210 120 120M260 210l140-90M260 210v110" stroke="#ffffff" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.8"/>
+
+                <!-- central router -->
+                <g>
+                  <rect x="196" y="176" width="128" height="68" rx="16" fill="#ffffff" stroke="rgba(29,95,208,0.6)" stroke-width="2"/>
+                  <rect x="216" y="196" width="88" height="10" rx="5" fill="rgba(29,95,208,0.2)"/>
+                  <rect x="216" y="196" width="60" height="10" rx="5" fill="url(#net-grad)"/>
+                  <rect x="216" y="214" width="88" height="10" rx="5" fill="rgba(109,74,255,0.2)"/>
+                  <rect x="216" y="214" width="44" height="10" rx="5" fill="#6D4AFF"/>
+                  <text x="260" y="266" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">core-router</text>
+                </g>
+
+                <!-- endpoints -->
+                <g font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#16233b">
+                  <rect x="56" y="88" width="112" height="52" rx="12" fill="#ffffff" stroke="rgba(29,95,208,0.45)" stroke-width="1.5"/>
+                  <text x="112" y="118" text-anchor="middle">Workstations</text>
+
+                  <rect x="352" y="88" width="112" height="52" rx="12" fill="#ffffff" stroke="rgba(109,74,255,0.45)" stroke-width="1.5"/>
+                  <text x="408" y="118" text-anchor="middle">Linux server</text>
+
+                  <rect x="196" y="308" width="128" height="52" rx="12" fill="#ffffff" stroke="rgba(14,157,179,0.5)" stroke-width="1.5"/>
+                  <text x="260" y="338" text-anchor="middle">Monitoring</text>
+                </g>
+
+                <!-- status dots -->
+                <circle cx="72" cy="104" r="5" fill="#16a34a"/>
+                <circle cx="368" cy="104" r="5" fill="#16a34a"/>
+                <circle cx="212" cy="324" r="5" fill="#16a34a"/>
+              </svg>
+              <p class="hero-slide__caption">Illustrative topology — configured with your approval only</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 — Programming -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Programming and development">
+          <div class="hero-slide__inner">
+            <div>
+              <p class="hero-slide__eyebrow">Programming &amp; development</p>
+              <h2 class="hero-slide__title">Software built<br><span class="text-gradient">to be maintained.</span></h2>
+              <p class="hero-slide__lede">
+                Python utilities, REST APIs, backends, and prototypes — written with tests,
+                documentation, and clear structure, so the codebase is an asset rather than
+                a liability after delivery.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn--primary btn--lg" href="services.html#programming">Learn More</a>
+                <a class="btn btn--secondary btn--lg" href="contact.html?service=programming">Discuss development work</a>
+              </div>
+            </div>
+            <div class="hero-slide__visual">
+              <svg viewBox="0 0 520 400" fill="none" role="img" aria-labelledby="dev-viz-title dev-viz-desc" width="100%">
+                <title id="dev-viz-title">Illustration of a code editor and test results</title>
+                <desc id="dev-viz-desc">A code window showing a function definition, next to a panel with passing tests.</desc>
+                <defs>
+                  <linearGradient id="dev-grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="8" width="504" height="384" rx="24" fill="#f0f4fb" stroke="rgba(22,35,59,0.16)" stroke-width="1.5"/>
+                <rect x="8" y="8" width="504" height="44" rx="24" fill="#e8eefb"/>
+                <rect x="8" y="36" width="504" height="16" fill="#e8eefb"/>
+                <circle cx="34" cy="30" r="5" fill="#1D5FD0" opacity="0.85"/>
+                <circle cx="52" cy="30" r="5" fill="#6D4AFF" opacity="0.75"/>
+                <circle cx="70" cy="30" r="5" fill="#0E9DB3" opacity="0.7"/>
+                <text x="260" y="35" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="13" fill="#5A6784">service.py — main</text>
+
+                <!-- code window -->
+                <rect x="40" y="76" width="270" height="284" rx="16" fill="#ffffff" stroke="rgba(22,35,59,0.2)" stroke-width="1.5"/>
+                <g font-family="Menlo, Consolas, monospace" font-size="12">
+                  <text x="64" y="112" fill="#5A6784">1</text>
+                  <text x="88" y="112" fill="#1D5FD0">def</text>
+                  <text x="120" y="112" fill="#16233b">predict(features):</text>
+
+                  <text x="64" y="140" fill="#5A6784">2</text>
+                  <text x="88" y="140" fill="#5A6784">    </text>
+                  <text x="120" y="140" fill="#6D4AFF">validate</text>
+                  <text x="176" y="140" fill="#16233b">(features)</text>
+
+                  <text x="64" y="168" fill="#5A6784">3</text>
+                  <text x="88" y="168" fill="#5A6784">    </text>
+                  <text x="120" y="168" fill="#16233b">model = load()</text>
+
+                  <text x="64" y="196" fill="#5A6784">4</text>
+                  <text x="88" y="196" fill="#5A6784">    </text>
+                  <text x="120" y="196" fill="#0E9DB3">return</text>
+                  <text x="164" y="196" fill="#16233b"> model(features)</text>
+
+                  <rect x="64" y="220" width="222" height="1.5" fill="rgba(22,35,59,0.14)"/>
+
+                  <text x="64" y="250" fill="#5A6784">5</text>
+                  <text x="88" y="250" fill="#1D5FD0">class</text>
+                  <text x="128" y="250" fill="#16233b">APIHandler:</text>
+
+                  <text x="64" y="278" fill="#5A6784">6</text>
+                  <text x="88" y="278" fill="#5A6784">    </text>
+                  <text x="120" y="278" fill="#6D4AFF">rate_limit</text>
+                  <text x="200" y="278" fill="#16233b">= 100</text>
+
+                  <text x="64" y="306" fill="#5A6784">7</text>
+                  <text x="88" y="306" fill="#5A6784">    </text>
+                  <text x="120" y="306" fill="#16233b">timeout = 30</text>
+                </g>
+
+                <!-- tests panel -->
+                <g>
+                  <rect x="330" y="76" width="150" height="150" rx="16" fill="#ffffff" stroke="rgba(29,95,208,0.4)" stroke-width="1.5"/>
+                  <text x="354" y="106" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">TESTS</text>
+                  <g font-family="Menlo, Consolas, monospace" font-size="11" fill="#16233b">
+                    <circle cx="358" cy="130" r="5" fill="#16a34a"/>
+                    <text x="372" y="134">test_api · pass</text>
+                    <circle cx="358" cy="158" r="5" fill="#16a34a"/>
+                    <text x="372" y="162">test_rate · pass</text>
+                    <circle cx="358" cy="186" r="5" fill="#16a34a"/>
+                    <text x="372" y="190">test_load · pass</text>
+                  </g>
+                </g>
+
+                <!-- coverage panel -->
+                <g>
+                  <rect x="330" y="246" width="150" height="114" rx="16" fill="#ffffff" stroke="rgba(109,74,255,0.4)" stroke-width="1.5"/>
+                  <text x="354" y="276" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">COVERAGE</text>
+                  <rect x="354" y="292" width="102" height="10" rx="5" fill="rgba(22,35,59,0.12)"/>
+                  <rect x="354" y="292" width="86" height="10" rx="5" fill="url(#dev-grad)"/>
+                  <text x="354" y="326" font-family="Menlo, Consolas, monospace" font-size="12" fill="#16233b">84% covered</text>
+                  <text x="354" y="346" font-family="Menlo, Consolas, monospace" font-size="10" fill="#5A6784">docs updated</text>
+                </g>
+              </svg>
+              <p class="hero-slide__caption">Illustrative code window — not client code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <div class="hero-slider__controls">
+        <button class="hero-slider__arrow" data-slider-prev type="button" aria-label="Previous slide">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="hero-slider__dots" role="group" aria-label="Choose slide">
+          <button class="hero-slider__dot" type="button" aria-label="Slide 1: Applied AI and machine learning" aria-current="true"></button>
+          <button class="hero-slider__dot" type="button" aria-label="Slide 2: Business automation" aria-current="false"></button>
+          <button class="hero-slider__dot" type="button" aria-label="Slide 3: Networking and IT" aria-current="false"></button>
+          <button class="hero-slider__dot" type="button" aria-label="Slide 4: Programming and development" aria-current="false"></button>
+        </div>
+        <button class="hero-slider__arrow" data-slider-next type="button" aria-label="Next slide">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </section>
 
@@ -339,15 +652,15 @@
           <article class="work-card reveal">
             <div class="work-card__media">
               <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
-                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
-                <text x="30" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">confusion_matrix</text>
-                <rect x="30" y="52" width="52" height="40" rx="6" fill="rgba(91,140,255,0.6)"/>
-                <rect x="90" y="52" width="52" height="40" rx="6" fill="rgba(139,92,246,0.28)"/>
-                <rect x="30" y="100" width="52" height="20" rx="6" fill="rgba(139,92,246,0.28)"/>
-                <rect x="90" y="100" width="52" height="20" rx="6" fill="rgba(91,140,255,0.4)"/>
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#ffffff" stroke="rgba(22,35,59,0.18)"/>
+                <text x="30" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">confusion_matrix</text>
+                <rect x="30" y="52" width="52" height="40" rx="6" fill="rgba(29,95,208,0.75)"/>
+                <rect x="90" y="52" width="52" height="40" rx="6" fill="rgba(109,74,255,0.3)"/>
+                <rect x="30" y="100" width="52" height="20" rx="6" fill="rgba(109,74,255,0.3)"/>
+                <rect x="90" y="100" width="52" height="20" rx="6" fill="rgba(29,95,208,0.5)"/>
                 <path d="M170 118 190 100 210 106 230 80 250 88 270 62 296 70" stroke="url(#wc1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <defs><linearGradient id="wc1" x1="170" y1="118" x2="296" y2="62"><stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
-                <text x="170" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">metrics_report</text>
+                <defs><linearGradient id="wc1" x1="170" y1="118" x2="296" y2="62"><stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/></linearGradient></defs>
+                <text x="170" y="40" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">metrics_report</text>
               </svg>
             </div>
             <div class="work-card__body">
@@ -371,17 +684,17 @@
           <article class="work-card reveal">
             <div class="work-card__media">
               <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
-                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
-                <rect x="34" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(91,140,255,0.5)"/>
-                <text x="66" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Ingest</text>
-                <path d="M104 75h28" stroke="#5B8CFF" stroke-width="2"/>
-                <path d="m128 70 6 5-6 5" fill="none" stroke="#5B8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="140" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(139,92,246,0.5)"/>
-                <text x="172" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Transform</text>
-                <path d="M210 75h28" stroke="#8B5CF6" stroke-width="2"/>
-                <path d="m234 70 6 5-6 5" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="246" y="56" width="64" height="38" rx="8" fill="#121B30" stroke="rgba(52,211,224,0.5)"/>
-                <text x="278" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#E9EEFB">Report</text>
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#ffffff" stroke="rgba(22,35,59,0.18)"/>
+                <rect x="34" y="56" width="64" height="38" rx="8" fill="#f0f4fb" stroke="rgba(29,95,208,0.5)"/>
+                <text x="66" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#16233b">Ingest</text>
+                <path d="M104 75h28" stroke="#1D5FD0" stroke-width="2"/>
+                <path d="m128 70 6 5-6 5" fill="none" stroke="#1D5FD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="140" y="56" width="64" height="38" rx="8" fill="#f0f4fb" stroke="rgba(109,74,255,0.5)"/>
+                <text x="172" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#16233b">Transform</text>
+                <path d="M210 75h28" stroke="#6D4AFF" stroke-width="2"/>
+                <path d="m234 70 6 5-6 5" fill="none" stroke="#6D4AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="246" y="56" width="64" height="38" rx="8" fill="#f0f4fb" stroke="rgba(14,157,179,0.5)"/>
+                <text x="278" y="79" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#16233b">Report</text>
                 <text x="34" y="122" font-family="Menlo, Consolas, monospace" font-size="10" fill="#5A6784">logs: run=ok rows=1,204 errors=0</text>
               </svg>
             </div>
@@ -406,13 +719,13 @@
           <article class="work-card reveal">
             <div class="work-card__media">
               <svg viewBox="0 0 340 150" fill="none" aria-hidden="true" width="100%">
-                <rect x="14" y="14" width="312" height="122" rx="12" fill="#0B1120" stroke="rgba(148,163,184,0.2)"/>
-                <text x="30" y="42" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">POST /predict</text>
-                <text x="30" y="64" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5B8CFF">{ "features": [ … ] }</text>
-                <text x="30" y="88" font-family="Menlo, Consolas, monospace" font-size="11" fill="#7D8AA3">HTTP/1.1 200 OK</text>
-                <text x="30" y="110" font-family="Menlo, Consolas, monospace" font-size="11" fill="#8B5CF6">{ "prediction": … }</text>
-                <circle cx="290" cy="42" r="14" fill="rgba(74,222,128,0.15)" stroke="rgba(74,222,128,0.6)"/>
-                <path d="m284 42 4 4 8-8" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="14" y="14" width="312" height="122" rx="12" fill="#ffffff" stroke="rgba(22,35,59,0.18)"/>
+                <text x="30" y="42" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">POST /predict</text>
+                <text x="30" y="64" font-family="Menlo, Consolas, monospace" font-size="11" fill="#1D5FD0">{ "features": [ … ] }</text>
+                <text x="30" y="88" font-family="Menlo, Consolas, monospace" font-size="11" fill="#5A6784">HTTP/1.1 200 OK</text>
+                <text x="30" y="110" font-family="Menlo, Consolas, monospace" font-size="11" fill="#6D4AFF">{ "prediction": … }</text>
+                <circle cx="290" cy="42" r="14" fill="rgba(22,163,74,0.15)" stroke="rgba(22,163,74,0.6)"/>
+                <path d="m284 42 4 4 8-8" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <div class="work-card__body">
@@ -463,13 +776,13 @@
             <svg class="brand__mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
               <defs>
                 <linearGradient id="brand-grad-f" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#5B8CFF"/><stop offset="1" stop-color="#8B5CF6"/>
+                  <stop stop-color="#1D5FD0"/><stop offset="1" stop-color="#6D4AFF"/>
                 </linearGradient>
               </defs>
               <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="url(#brand-grad-f)" stroke-width="2.5"/>
               <path d="M10 22.5V9.5L22 22.5V9.5" stroke="url(#brand-grad-f)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="10" cy="9.5" r="2.6" fill="#070B14" stroke="#5B8CFF" stroke-width="2"/>
-              <circle cx="22" cy="22.5" r="2.6" fill="#070B14" stroke="#8B5CF6" stroke-width="2"/>
+              <circle cx="10" cy="9.5" r="2.6" fill="#ffffff" stroke="#1D5FD0" stroke-width="2"/>
+              <circle cx="22" cy="22.5" r="2.6" fill="#ffffff" stroke="#6D4AFF" stroke-width="2"/>
             </svg>
             <span class="brand__name">NeauralStack&nbsp;<span>Labs</span></span>
           </a>
@@ -515,5 +828,39 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== CHATBOT (automated assistant) ==================== -->
+  <button class="chat-fab" id="chat-fab" data-chat-toggle type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Open automated assistant">
+    <svg class="chat-fab__icon chat-fab__icon--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/>
+      <path d="M8.5 10.5h7M8.5 14h4.5"/>
+    </svg>
+    <svg class="chat-fab__icon chat-fab__icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <path d="M6 6l12 12M18 6 6 18"/>
+    </svg>
+  </button>
+
+  <div class="chat-panel" id="chat-panel" data-chat-panel hidden role="dialog" aria-label="NeauralStack automated assistant">
+    <div class="chat-panel__header">
+      <span class="chat-panel__avatar" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/>
+        </svg>
+      </span>
+      <div>
+        <p class="chat-panel__title">NeauralStack Assistant</p>
+        <p class="chat-panel__subtitle">Automated helper — not a person</p>
+      </div>
+    </div>
+    <div class="chat-log" data-chat-log role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="chat-chips" data-chat-chips></div>
+    <form class="chat-panel__form" data-chat-form>
+      <label class="sr-only" for="chat-input">Type your message</label>
+      <input class="chat-panel__input" id="chat-input" data-chat-input type="text" placeholder="Ask about services or pricing…" autocomplete="off">
+      <button class="chat-panel__send" type="submit" aria-label="Send message">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
 </body>
 </html>

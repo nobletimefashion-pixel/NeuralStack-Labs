@@ -13,6 +13,9 @@ Search the codebase for `TODO(owner)` to find every marked spot.
       Build and Install commands and Output Directory `.`.
 - [ ] **Confirm the contact email** — currently `ferroshes@gmail.com` in `js/main.js`
       and all `mailto:` links. Change if a dedicated business address is preferred.
+- [ ] **Confirm the budget ranges** in `js/chatbot.js` → `CONFIG.budgetRanges`.
+      They are placeholder planning bands shown by the chat assistant — replace them
+      with your real indicative numbers. Keep the "planning range only" disclaimer.
 - [ ] **Review the privacy draft** on `contact.html` (marked "draft — pending owner
       confirmation"). Approve the wording or replace it. Consider adding a real
       privacy policy page.
@@ -28,7 +31,7 @@ Search the codebase for `TODO(owner)` to find every marked spot.
 
 - [ ] **Test the contact form end-to-end** in at least two browsers: submit it and
       confirm the email client opens with a correctly prefilled message.
-- [ ] **Check mobile layout** on a real phone (nav menu, hero, form).
+- [ ] **Check mobile layout** on a real phone (nav menu, hero slider, chat widget, form).
 - [ ] **Proofread all copy** — especially service descriptions, which the owner can
       narrow or expand (`services.html`).
 - [ ] **Team profiles**: seven members are listed on `about.html` with roles assigned

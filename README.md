@@ -4,7 +4,9 @@ Production-ready static website for **NeauralStack Labs**, a technology services
 specializing in applied AI/ML engineering, intelligent automation, networking, and
 software development.
 
-No framework, no build step, no backend, no recurring infrastructure cost.
+Light corporate theme with a mega-menu navigation, a rotating hero slider, and a
+scripted chat assistant. No framework, no build step, no backend, no recurring
+infrastructure cost.
 
 ## Run locally
 
@@ -27,7 +29,7 @@ npx serve .
 ## Project structure
 
 ```
-index.html          Home: hero, services, process, selected work, CTA
+index.html          Home: hero slider, services, process, selected work, CTA
 services.html       Full service details (4 services, anchor-linked)
 approach.html       How we work (5 stages) + why work with us
 work.html           Technical demonstrations (3, clearly labeled)
@@ -36,7 +38,9 @@ contact.html        FAQ + project inquiry form (mailto-based)
 css/tokens.css      Design tokens (colors, type, spacing, motion)
 css/base.css        Reset, typography, layout utilities
 css/components.css  All UI components (nav, cards, forms, footer…)
-js/main.js          Mobile nav, scroll reveal, year stamp, contact form
+js/main.js          Mega-menu nav, scroll reveal, year stamp, contact form
+js/hero-slider.js   Home page hero slider (autoplay, pause, reduced-motion)
+js/chatbot.js       Scripted assistant (services, budgets, contact)
 assets/             Logo, favicon, Open Graph image source
 robots.txt          Crawler rules
 sitemap.xml         Sitemap
@@ -55,6 +59,7 @@ All placeholders are marked with `TODO(owner)` in the source. The main ones:
 | OG image PNG | Export `assets/og-image.svg` to a 1200×630 PNG, update OG tags | referenced as `assets/og-image.png` (does not exist yet) |
 | Fiverr links | Footer + contact page (`ibrahim5665`); team cards on `about.html` | added — 5 member cards still lack Fiverr URLs (marked "pending") |
 | Team roles | `about.html` team grid | assigned by build — owner should confirm each title |
+| Budget ranges | `js/chatbot.js` → `CONFIG.budgetRanges` | placeholder planning bands — owner must confirm real numbers |
 | Privacy policy | `contact.html` (draft note marked "pending owner confirmation") | draft only |
 | Legal pages | footer (comment marks the spot) | none |
 
@@ -76,6 +81,24 @@ Nothing is stored or transmitted by the website itself.
   Netlify Forms), swap the `<form>` handler in `contact.html` and remove the mailto logic
   in `js/main.js` — the markup is already standard and portable.
 
+## Chat assistant (scripted, not AI)
+
+`js/chatbot.js` powers a small "Ask NeauralStack" widget on every page. It is a
+**deterministic keyword matcher** — no AI API, no network calls, no data leaves the
+browser. It answers: services, budget ranges, timelines, process, team, and contact,
+and hands off to a human for anything it does not recognise.
+
+**Owner edit:** update `CONFIG.budgetRanges` in `js/chatbot.js` with your real
+indicative numbers. The ranges are always shown with a "planning range only, quoted
+after discovery" disclaimer — keep it that way.
+
+## Hero slider (home page only)
+
+`js/hero-slider.js` rotates four slides (AI/ML, automation, networking, programming),
+each with a "Learn More" CTA to the matching service anchor. Autoplay pauses on
+hover/focus and is disabled entirely under `prefers-reduced-motion`. Without JS the
+first slide stays visible.
+
 ## SEO & sharing
 
 Every page has: unique title, meta description, canonical URL placeholder, Open Graph
@@ -84,15 +107,17 @@ and Twitter card tags, semantic heading hierarchy, and descriptive links. `robot
 
 ## Accessibility
 
-Built to WCAG 2.2 AA practices: skip link, keyboard-operable mobile menu, visible focus
-states, labeled form fields with inline error messages, `aria-current` nav state,
-sufficient contrast, reduced-motion support, and semantic landmarks.
+Built to WCAG 2.2 AA practices: skip link, keyboard-operable mega-menu (hover on
+desktop, tap on mobile, Escape closes), slider with pause and labeled controls,
+chat assistant with `role="log"` announcements, visible focus states, labeled form
+fields with inline error messages, `aria-current` nav state, sufficient contrast,
+reduced-motion support, and semantic landmarks.
 
 ## Performance
 
 - No external requests: no web fonts, no CDNs, no analytics, no trackers
 - All illustrations are inline/local SVG; total CSS+JS is a few tens of KB uncompressed
-- Minimal JavaScript (one file, no dependencies)
+- Minimal JavaScript (three small dependency-free files)
 
 ## Privacy & security
 

@@ -100,7 +100,7 @@ a {
 }
 
 a:hover {
-  color: var(--violet-light);
+  color: var(--blue-strong);
 }
 
 strong,
@@ -141,12 +141,13 @@ hr {
   left: var(--space-3);
   z-index: 200;
   padding: var(--space-3) var(--space-5);
-  background: var(--surface-2);
+  background: var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-md);
   color: var(--text);
   font-weight: var(--fw-semibold);
   text-decoration: none;
+  box-shadow: var(--shadow-md);
   transform: translateY(-160%);
   transition: transform var(--dur-base) var(--ease);
 }
@@ -177,7 +178,7 @@ hr {
 }
 
 .section--elevated {
-  background: linear-gradient(180deg, rgba(18, 27, 48, 0.55) 0%, rgba(7, 11, 20, 0) 100%);
+  background: linear-gradient(180deg, rgba(232, 240, 253, 0.9) 0%, rgba(244, 247, 252, 0) 100%);
   border-block: 1px solid var(--border);
 }
 
@@ -270,8 +271,8 @@ hr {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(29, 95, 208, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 95, 208, 0.06) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 35%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 35%, transparent 75%);

@@ -7,39 +7,103 @@
   "use strict";
 
   /* ------------------------------------------------------------------
-     Mobile navigation
+     Mobile navigation + desktop dropdowns
      ------------------------------------------------------------------ */
   function initNav() {
     var toggle = document.querySelector("[data-nav-toggle]");
     var nav = document.getElementById("primary-nav");
     if (!toggle || !nav) return;
 
-    function setOpen(open) {
+    var dropdowns = Array.prototype.slice.call(nav.querySelectorAll(".nav-item.has-dropdown"));
+    var desktopMq = window.matchMedia("(min-width: 60em)");
+
+    function setDrawer(open) {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
       document.body.style.overflow = open ? "hidden" : "";
     }
 
+    function closeAllDropdowns(except) {
+      dropdowns.forEach(function (item) {
+        if (item === except) return;
+        item.classList.remove("is-open");
+        var btn = item.querySelector(".nav__link[aria-expanded]");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    function setDropdown(item, open) {
+      item.classList.toggle("is-open", open);
+      var btn = item.querySelector(".nav__link[aria-expanded]");
+      if (btn) btn.setAttribute("aria-expanded", String(open));
+      if (open) closeAllDropdowns(item);
+    }
+
+    // Mobile drawer toggle
     toggle.addEventListener("click", function () {
-      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      setDrawer(toggle.getAttribute("aria-expanded") !== "true");
     });
 
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) setOpen(false);
+      // Close drawer when a plain link is chosen
+      if (e.target.closest("a") && !e.target.closest(".nav__link[aria-expanded]")) {
+        setDrawer(false);
+        closeAllDropdowns(null);
+      }
     });
 
+    // Dropdown toggles
+    dropdowns.forEach(function (item) {
+      var btn = item.querySelector(".nav__link[aria-expanded]");
+      if (!btn) return;
+
+      btn.addEventListener("click", function () {
+        setDropdown(item, !item.classList.contains("is-open"));
+      });
+
+      // Desktop hover intent
+      var hoverTimer = null;
+      item.addEventListener("mouseenter", function () {
+        if (!desktopMq.matches) return;
+        clearTimeout(hoverTimer);
+        setDropdown(item, true);
+      });
+      item.addEventListener("mouseleave", function () {
+        if (!desktopMq.matches) return;
+        hoverTimer = setTimeout(function () {
+          setDropdown(item, false);
+        }, 180);
+      });
+    });
+
+    // Escape closes everything and restores focus
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
+      if (e.key !== "Escape") return;
+      var openDropdown = nav.querySelector(".nav-item.is-open");
+      if (openDropdown) {
+        var btn = openDropdown.querySelector(".nav__link[aria-expanded]");
+        setDropdown(openDropdown, false);
+        if (btn) btn.focus();
+        return;
+      }
+      if (toggle.getAttribute("aria-expanded") === "true") {
+        setDrawer(false);
         toggle.focus();
       }
     });
 
-    // Reset state when resizing to desktop
-    var mq = window.matchMedia("(min-width: 60em)");
-    (mq.addEventListener ? mq.addEventListener.bind(mq, "change") : mq.addListener.bind(mq))(function () {
-      setOpen(false);
+    // Click outside closes dropdowns
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".nav-item.has-dropdown")) closeAllDropdowns(null);
     });
+
+    // Reset when resizing to desktop
+    var onResize = function () {
+      setDrawer(false);
+      closeAllDropdowns(null);
+    };
+    if (desktopMq.addEventListener) desktopMq.addEventListener("change", onResize);
+    else if (desktopMq.addListener) desktopMq.addListener(onResize);
   }
 
   /* ------------------------------------------------------------------
@@ -87,8 +151,6 @@
 
   /* ------------------------------------------------------------------
      Contact form -> prefilled email (mailto)
-     No data is stored or sent by the website itself; the visitor's own
-     email application composes the message. Fallback link always shown.
      ------------------------------------------------------------------ */
   var CONTACT_EMAIL = "ferroshes@gmail.com";
 
@@ -99,7 +161,6 @@
     var status = document.getElementById("form-status");
     var serviceSelect = form.querySelector("#service");
 
-    // Preselect service when arriving via ?service=... (e.g. from service cards)
     try {
       var params = new URLSearchParams(window.location.search);
       var preset = params.get("service");
@@ -110,7 +171,7 @@
         if (option) serviceSelect.value = preset;
       }
     } catch (err) {
-      /* URLSearchParams unavailable — ignore, form still works */
+      /* URLSearchParams unavailable — ignore */
     }
 
     function showStatus(kind, message) {
@@ -196,7 +257,6 @@
         "&body=" +
         encodeURIComponent(body);
 
-      // Hand off to the visitor's email application.
       window.location.href = mailto;
 
       showStatus(
