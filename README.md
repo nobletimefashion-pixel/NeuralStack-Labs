@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NeauralStack Labs — Official Website
 
 Production-ready static website for **NeauralStack Labs**, a technology services agency
@@ -113,3 +114,6 @@ Works on any static host. Free options:
 
 After deployment, replace every `neauralstacklabs.example` placeholder with the real URL
 and re-check `robots.txt` and `sitemap.xml`.
+=======
+# NeuralStack-Labs
+>>>>>>> 2b2c36a7e1f3184c224ea2aa85f3b8f0503db455
